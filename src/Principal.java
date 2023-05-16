@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Principal {
     static int pontuacao10 = 0, pontuacao5 = 0;
 
-    static int rodadas = 4;
+    static int rodadas = 3;
 
 
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class Principal {
         System.out.println("----------- VAMOS INICIAR! ----------- \nLEMBRE-SE, VOCÊ SÓ TERÁ 3 JOGADAS... BOA SORTE! \n");
 
         for (int i = 0; i < rodadas; i++) {
-            System.out.println("Digite um número: ");
+            System.out.println("Digite um número de 1 até 6: ");
             int numUsuario = scan.nextInt();
 
             verificarNumeroDigitado(numUsuario);
@@ -27,7 +27,7 @@ public class Principal {
     }
 
     public static void verificarNumeroDigitado(int numUsuario) { //verificacao numero digitado
-        if (numUsuario < 1 || numUsuario > 6) {
+        if (!(numUsuario > 0) || !(numUsuario < 7)) {
             System.out.println("NÚMERO INVÁLIDO"); //sinal de alerta
             System.exit(0);
         }
@@ -62,8 +62,7 @@ public class Principal {
             System.out.println("Você não acertou o número do dado em nenhuma rodada");
 
         } else {
-
-            System.out.println("Você acertou em " + (pontuacao10 + pontuacao5) + " rodadas e errou " + (rodadas - (pontuacao10 + pontuacao5)));
+            System.out.println("Você acertou " + (pontuacao10 + pontuacao5) + " rodadas e errou " + (rodadas - (pontuacao10 + pontuacao5)));
 
         }
 
