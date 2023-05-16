@@ -26,14 +26,14 @@ public class Principal {
         contagemPontos();
     }
 
-    public static void verificarNumeroDigitado(int numUsuario) { //verificacao numero digitado
+    public static void verificarNumeroDigitado(int numUsuario) {
         if (!(numUsuario > 0) || !(numUsuario < 7)) {
-            System.out.println("NÚMERO INVÁLIDO"); //sinal de alerta
+            System.out.println("NÚMERO INVÁLIDO");
             System.exit(0);
         }
     }
 
-    public static int gerarNumeroDado() { //fazer o dado girar
+    public static int gerarNumeroDado() {
         Random rodar = new Random();
         return rodar.nextInt(6) + 1;
     }
